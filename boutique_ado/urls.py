@@ -18,5 +18,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('accounts', include('allauth.urls')), # Called 'accounts', includes allaugh.urls accounts. (self-learn)
+    path('accounts/', include('allauth.urls')), # Called 'accounts', includes allaugh.urls accounts. (self-learn)
 ]
