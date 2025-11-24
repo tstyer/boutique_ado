@@ -1,4 +1,3 @@
-
 from django.db.models.signals import post_save, post_delete
 from django.dispatch import receiver
 
@@ -13,9 +12,7 @@ def update_on_save(sender, instance, created, **kwargs):
 
 
 @receiver(post_delete, sender=OrderLineItem)
-def update_on_save(sender, instance, **kwargs):
-    # chris made a mistake here, this function should have 
-    # been called update_on_delete. He fixes this in an upcoming video.
+def update_on_delete(sender, instance, **kwargs):
     """
     Update order total on lineitem delete
     """
